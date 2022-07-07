@@ -36,8 +36,8 @@ export default function VideosList({ latestUpload }) {
           url={video.videoUrl}
           light={video.thumbnailUrl}
           controls={true}
-          width={500}
           height={200}
+          width={300}
         />
       ))}
     </div>
