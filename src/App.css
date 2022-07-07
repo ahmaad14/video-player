@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+html {
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #262626;
+  font-family: 'Roboto', sans-serif;
+  padding: 4% 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  width: fit-content;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.upload-btn {
+  display: block;
+  cursor: pointer;
+  background: linear-gradient(45deg, #fa4659, #e9007f);
   color: white;
+  height: 40px;
+  width: fit-content;
+  padding: 0 40px;
+  margin: auto;
+  line-height: 40px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=file] {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.videos-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.videos-list>* {
+  margin: 20px;
+  max-width: 100%;
+}
+
+.progress__bar {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  height: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #f9fd50, #00bd56);
+}
+
+.progress__bar-fill {
+  background-color: rgb(213, 215, 217);
+  height: 20px;
+  width: 100%;
+  transition: all 2s;
+}
+
+.status-completed {
+  color: #00bd56;
+  font-size: 24px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.status-failed {
+  color: #DC1C13;
+  font-size: 24px;
+  text-align: center;
 }
